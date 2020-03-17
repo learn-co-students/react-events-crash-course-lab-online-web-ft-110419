@@ -6,7 +6,6 @@ export default class ChromeBoisDomain extends Component {
   
   handleMouseMove = (event) => drawChromeBoiAtCoords(event.screenX, event.screenY)
   
-  
   handleKeyPress = (event) => {
     if (event.key === "a") {
       return resize("+")
