@@ -7,11 +7,13 @@ export default class ChromeBoisDomain extends Component {
   handleMouseMove = (event) => drawChromeBoiAtCoords(event.screenX, event.screenY)
   
   
-  
-  /* TODO: Create an event handler which, when fired, invokes the provided
-   * `toggleCycling` function with no arguments. Don't forget the click event
-   * listener that should fire it!
-   */
+  handleKeyPress = (event) => {
+    if (event.key === "a") {
+      return resize(+)
+    } else if (event.key === "s") {
+      return resize(-)
+    }
+  }
 
 
    
@@ -29,6 +31,8 @@ export default class ChromeBoisDomain extends Component {
       <canvas 
         onClick={toggleCycling}
         onMouseMove={this.handleMouseMove}
+        onKeyPress={this.handleKeyPress}
+
         width='900'
         height='600'
         tabIndex="0">
