@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { drawChromeBoiAtCoords, toggleCycling, resize } from './canvasHelpers.js'
+import { drawChromeBoiAtCoords, toggleCycling, resize } from './canvasHelpers.js';
 
 
 export default class ChromeBoisDomain extends Component {
   
   handleMouseMove = (event) => {
-    drawChromeBoiAtCoords(event.clientX, event.clientY);
+     drawChromeBoiAtCoords(event.clientX, event.clientY);
   }
 
   handleKeyDown = (event) => {
