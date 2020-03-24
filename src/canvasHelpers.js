@@ -30,12 +30,12 @@ export function drawChromeBoiAtCoords(x, y) {
   const [cX, cY] = [rect.left, rect.top]
   
   let img
-  if (cycling) {
-    img = colors[idx]
-    idx = (idx + 1) % 3
-  } else {
-    img = def
-  }
+    if (cycling) {
+      img = colors[idx]
+      idx = (idx + 1) % 3
+    } else {
+      img = def
+    }
   
   ctx.drawImage(img, x - cX - 50, y - cY - 80, sizeX, sizeY)
 }
