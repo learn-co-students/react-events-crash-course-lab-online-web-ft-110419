@@ -10,10 +10,7 @@ export default class ChromeBoisDomain extends Component {
      * function that has been provided and is already imported
      * (`drawChromeBoiAtCoords` expects two arguments, an x and a y coordinate)
      */
-    this.state = {x: 0, y: 0}
-    this.setState({x: event.clientX, y: event.clientY})
-    const {x, y} = this.state
-    drawChromeBoiAtCoords(x, y)
+    drawChromeBoiAtCoords(event.clientX, event.clientY)
   }
   
   handleMouseClick = () => {
